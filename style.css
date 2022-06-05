@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+h1, 
+p,
+span,
+button {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 20px;
+}
+
+p {
+    color:hsl(0, 0%, 41%)
+}
+
+/* nav */
+/* inline-block 여백 처리 해결 안 됨 */
+.nav {
+    margin: 20px 30px 0 30px;
+}
+
+.img_logo {
+    width: 80px;
+    height: 25px;
+    margin-right: 50px;
+}
+
+.banner {
+    display: inline-block;
+    font-size: 20px;
+}
+
+.bannerinbanner {
+    display: flex;
+    justify-content: space-between;
+    width: 1320px;
+}
+
+.features_icon_arrow_down {
+    margin-right: 60px;
+}
+
+.company_icon_arrow_down {
+    margin-right: 60px;
+}
+
+
+.careers {
+    margin-right: 40px;
+}
+
+.login {
+    margin-right: 40px;
+}
+
+.login_button {
+    background: inherit; 
+    border:none; 
+    padding: 0;
+    margin-right: 40px;
+    border-radius:0; 
+    cursor:pointer
+}
+
+.register_button {
+    width: 120px;
+    height: 40px; 
+    background: inherit; 
+    border-radius: 15px;
+    cursor:pointer
+}
+
+/* article */
+
+.article {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+
+.left_article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
