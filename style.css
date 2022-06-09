@@ -34,9 +34,13 @@ p {
     margin-right: 50px;
 }
 
-.banner {
+.banner1 {
     display: inline-block;
     font-size: 20px;
+}
+
+.banner2 {
+    display: none;
 }
 
 .bannerinbanner {
@@ -228,11 +232,13 @@ p {
 }
 
 .left_article_explanation h1 {
-    font-size: 63px;;
+    font-size: 90px;
+
 }
 
 .left_article_explanation p {
     margin-top: 30px;
+    margin-right: 100px;
     line-height: 1.2em;
 }
 
@@ -266,14 +272,25 @@ p {
     display: none;
 }
 
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 375px) {
 
+.nav {
+    display: block;
+}
 .snapAndHamberger {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
 }
 
+.bannerinbanner {
+    flex-direction: column;
+    width: 250px;
+}
+
+.topMenus {
+    flex-direction: column;
+}
 
 
 .imgDesktop {
@@ -288,10 +305,32 @@ p {
     display: block;
     height: 20px;
     width: 35px;
+    z-index: 401;
+    transition: all 0.3 ease-in-out;
+    cursor: pointer;
 }
 
-.banner {
-    display: none;
+.button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner1 {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    padding: 50px 20px;
+    z-index: 400;
+    box-sizing: border-box;
+    transition: right 0.4s ease-in-out;
+    background-color: #f0f0f0;
+}
+
+.banner1.on {
+    right: 0;
 }
 
 .article {
