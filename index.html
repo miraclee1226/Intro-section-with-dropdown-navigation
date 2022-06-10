@@ -22,7 +22,6 @@
                                 <div class="featuresShowList">
                                     <span class="features">Features</span>
                                     <img class="icon_arrow_down" src="./assets/icon-arrow-down.svg" alt="">
-                                    <img class="icon_arrow_up" src="./assets/icon-arrow-up.svg" alt="">
                                 </div>
                                 <ul class="featureList">
                                     <li>
@@ -48,7 +47,6 @@
                             <div class="companyShowList">
                                 <span class="company">Company</span>
                                 <img class="icon_arrow_down" src="./assets/icon-arrow-down.svg" alt="">
-                                <img class="icon_arrow_up" src="./assets/icon-arrow-up.svg" alt="">
                             </div>
                             <ul class="companyList">
                                 <li>
@@ -103,17 +101,29 @@
         document.addEventListener("DOMContentLoaded", function () {
         document.querySelector(".iconMenu").addEventListener("click", function (e) {
         if (document.querySelector(".banner1").classList.contains("on")) {
-          //메뉴 slideOut
-          document.querySelector(".banner1").classList.remove("on");
-          //slideOut시 menuBtn의 img src를 menu icon으로 변경
-          document.querySelector(".iconMenu").src = "./assets/icon-menu.svg"        
+        //메뉴 slideOut
+        document.querySelector(".banner1").classList.remove("on");
+        //slideOut시 menuBtn의 img src를 menu icon으로 변경
+        document.querySelector(".iconMenu").src = "./assets/icon-menu.svg"  
+        //페이지 스크롤 락 해제
+        document.querySelector('#dimmed').remove();
         } else {
-          //메뉴 slideIn
-          document.querySelector(".banner1").classList.add("on");
-          //slideIn시 menuBtn의 img src를 cross icon으로 변경
-          document.querySelector(".iconMenu").src = "./assets/icon-close-menu.svg";
-        }
-      });
+        //메뉴 slideIn
+        document.querySelector(".banner1").classList.add("on");
+        //slideIn시 menuBtn의 img src를 cross icon으로 변경
+        document.querySelector(".iconMenu").src = "./assets/icon-close-menu.svg";
+        //페이지 스크롤 락 레이어 추가
+        let div = document.createElement('div');
+        div.id = "dimmed";
+        document.body.append(div);
+        //페이지 스크롤 락 모바일 이벤트 차단
+        document.querySelector('#dimmed').addEventListener('scroll touchmove touchend mousewheel', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+                });             
+            }
+        });
     });
     </script>
 </html>

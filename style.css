@@ -272,11 +272,12 @@ p {
     display: none;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 500px) {
 
 .nav {
     display: block;
 }
+
 .snapAndHamberger {
     display: flex;
     justify-content: space-between;
@@ -285,13 +286,14 @@ p {
 
 .bannerinbanner {
     flex-direction: column;
-    width: 250px;
+    width: 220px;
+    margin-top: 30px;
 }
 
 .topMenus {
     flex-direction: column;
+    height: 200px;
 }
-
 
 .imgDesktop {
         display: none;
@@ -314,13 +316,24 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+    height: 90px;
+}
+
+.login_button {
+    margin-right: 0;
+}
+
+.register_button {
+    width: 200px;
 }
 
 .banner1 {
     position: fixed;
     top: 0;
-    right: -250px;
-    width: 250px;
+    right: -260px;
+    width: 260px;
     height: 100%;
     padding: 50px 20px;
     z-index: 400;
@@ -331,6 +344,16 @@ p {
 
 .banner1.on {
     right: 0;
+}
+
+#dimmed {
+    position: fixed;
+    top:0;
+    right:0;
+    z-index: 300;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .article {

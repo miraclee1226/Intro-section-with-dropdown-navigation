@@ -1,9 +1,8 @@
-const features = document.querySelector('.features');
+const mouseOn = document.querySelector(".featuresShowList");
 
-function iconArrowUp(){
-    alert('hi');
+function clickOn () {
+    if(document.querySelector())
+    document.querySelector("")
 }
 
-features.addEventListener("click", iconArrowUp);
-
-
+mouseOn.addEventListener("mouseOn", clickOn);
