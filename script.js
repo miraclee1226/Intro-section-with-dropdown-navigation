@@ -1,8 +1,10 @@
-const mouseOn = document.querySelector(".featuresShowList");
+const featuresShowList = document.querySelector(".featuresShowList");
 
-function clickOn () {
-    if(document.querySelector())
-    document.querySelector("")
+const arrowDown = document.getElementById("icon_arrow_down");
+
+function arrowUp() {
+    arrowDown.classList.toggle("src", "./assets/icon-arrow-up.svg")
 }
 
-mouseOn.addEventListener("mouseOn", clickOn);
+featuresShowList.addEventListener("mouseenter", arrowUp);
+// icon-arrow-up 해결못함
