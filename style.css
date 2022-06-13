@@ -6,7 +6,7 @@
 h1, 
 p,
 span,
-button {
+button,div {
     font-family: 'Epilogue', sans-serif;
     font-size: 20px;
 }
@@ -20,6 +20,7 @@ p {
 .topMenus {
     display: flex;
     justify-content: space-between;
+    align-items: center
 }
 
 .nav {
@@ -32,6 +33,10 @@ p {
     width: 80px;
     height: 25px;
     margin-right: 50px;
+}
+
+.snapAndHamberger {
+    margin-top: 10px;
 }
 
 .banner1 {
@@ -91,15 +96,30 @@ p {
     padding: 12px 16px;
 }
 
+.featureList li:hover {
+    color: black;
+    cursor: pointer;
+}
+
+
 .featuresHover:hover .featureList {
     display: block;
 }
 
-/* company */
-
-.company_icon_arrow_down {
-    margin-right: 60px;
+.featuresShowList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 110px;
 }
+
+.icon_arrow_down {
+    display: inline-block;
+}
+
+
+
+/* company */
 
 .company {
     color: gray;
@@ -117,6 +137,11 @@ p {
 
 .companyList li {
     color: gray;
+}
+
+.companyList li:hover {
+    color: black;
+    cursor: pointer;
 }
 
 .companyAll {
@@ -139,6 +164,13 @@ p {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+}
+
+.companyShowList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 110px;
 }
 
 .companyAll:hover .companyList {
@@ -276,6 +308,7 @@ p {
 
 .nav {
     display: block;
+    margin-right: 20px;
 }
 
 .snapAndHamberger {
@@ -292,7 +325,9 @@ p {
 
 .topMenus {
     flex-direction: column;
+    align-items: normal;
     height: 200px;
+    margin-left: 10px;
 }
 
 .imgDesktop {
@@ -306,7 +341,7 @@ p {
 .iconMenu {
     display: block;
     height: 20px;
-    width: 35px;
+    width: 25px;
     z-index: 401;
     transition: all 0.3 ease-in-out;
     cursor: pointer;
